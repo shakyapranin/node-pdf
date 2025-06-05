@@ -1,0 +1,19 @@
+{
+  "name": "node-pdf",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "handlebars": "^4.7.8",
+    "html-to-pdfmake": "^2.5.26",
+    "jsdom": "^26.1.0",
+    "pdfmake": "^0.2.20"
+  }
+}
