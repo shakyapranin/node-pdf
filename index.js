@@ -1,8 +1,9 @@
 import { ChartJSNodeCanvas } from "chartjs-node-canvas";
+import ejs from "ejs";
 import fs from "fs";
-import Handlebars from "handlebars";
 import htmlToPdfmake from "html-to-pdfmake";
 import { JSDOM } from "jsdom";
+import juice from "juice";
 import PdfPrinter from "pdfmake";
 
 const fonts = {
@@ -14,11 +15,9 @@ const fonts = {
   },
 };
 
-const source = fs.readFileSync("template.html", "utf8");
-const template = Handlebars.compile(source, { noEscape: true });
+const source = fs.readFileSync("pdf.html", "utf8");
 
 const pdfPrinter = new PdfPrinter(fonts);
-
 const chartJSNodeCanvas = new ChartJSNodeCanvas({ width: 600, height: 400 });
 
 async function generateChartImageBase64(config) {
@@ -68,9 +67,14 @@ const data = {
   chartImage: await generateChartImageBase64(chartConfig),
 };
 
-const result = template(data);
+const template = ejs.compile(source, { async: true });
+const result = await template(data);
+const inlinedHtml = juice(result); // CSS <style> converted to inline
+
+console.log(inlinedHtml);
+
 const dom = new JSDOM("");
-const pdfContent = htmlToPdfmake(result, { window: dom.window });
+const pdfContent = htmlToPdfmake(inlinedHtml, { window: dom.window });
 
 const docDefinition = {
   content: pdfContent,

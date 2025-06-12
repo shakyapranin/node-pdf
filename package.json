@@ -12,9 +12,11 @@
   "license": "ISC",
   "dependencies": {
     "chartjs-node-canvas": "^5.0.0",
+    "ejs": "^3.1.10",
     "handlebars": "^4.7.8",
     "html-to-pdfmake": "^2.5.26",
     "jsdom": "^26.1.0",
+    "juice": "^11.0.1",
     "pdfmake": "^0.2.20"
   }
 }

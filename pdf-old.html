@@ -1,0 +1,160 @@
+<html>
+  <head>
+    <title>Invoice - INV-590004012345</title>
+    <style>
+      .container {
+        display: flex;
+        /* padding: 8px; */
+        /* gap: 20px; */
+        justify-content: space-between;
+      }
+
+      .w-full {
+        width: 100%;
+      }
+
+      .flex-column {
+        flex-direction: column;
+      }
+
+      .align-right {
+        text-align: right;
+      }
+
+      .align-center {
+        text-align: center;
+      }
+
+      .label {
+        font-weight: bold;
+      }
+
+      .logo {
+        height: 100px;
+        width: auto;
+      }
+
+      table {
+        border-collapse: collapse;
+      }
+
+      thead {
+        background-color: #f0f0f0;
+        font-weight: bold;
+      }
+
+      td {
+        border-bottom: 1px solid #ddd;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="header container">
+      <div class="item" style="flex: 1">
+        <div class="logo-container">
+          <img class="logo" src="bird.jpg" alt="" />
+        </div>
+        <div><h2>Power Electronics US</h2></div>
+        <div>info@powerelectronicsus.com</div>
+        <div>1234 N Rosenbur Ct, Visalia, CA 932312, United States</div>
+      </div>
+      <div class="item align-right" style="flex: 1">
+        <h1 class="red">INVOICE</h1>
+        <div>Invoice no.</div>
+        <div>INV-590004012345</div>
+      </div>
+    </div>
+
+    <div class="container">
+      <div class="container item">
+        <div class="item" style="flex: 1">
+          <div class="label">Invoice To</div>
+          <div>Brett Hamming</div>
+          <div>
+            Rex Industries Inc 630 N 400 W, Salt Lake City, UT 84103, United
+            States
+          </div>
+        </div>
+        <div class="item" style="flex: 1">
+          <div class="label">Ship To</div>
+          <div>Brett Hamming</div>
+          <div>
+            Rex Industries Inc 630 N 400 W, Salt Lake City, UT 84103, United
+            States
+          </div>
+        </div>
+      </div>
+      <div class="item container w-full">
+        <div class="item container flex-column" style="flex: 1">
+          <div class="item">
+            <div class="label">Invoice Date</div>
+            <div>10/10/2025</div>
+          </div>
+          <div class="item">
+            <div class="label">Customer PO No.</div>
+            <div>PO-12343421</div>
+          </div>
+        </div>
+        <div class="item container flex-column" style="flex: 1">
+          <div class="item" style="flex: 1">
+            <div class="label">Customer ID</div>
+            <div>91234-12342</div>
+          </div>
+          <div class="item" style="flex: 1">
+            <div class="label">Packaging List</div>
+            <div>18234-1-123</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="">
+      <div class="">
+        <table class="w-full">
+          <thead>
+            <th>#</th>
+            <th>Item/Service</th>
+            <th>Quantity</th>
+            <th>UOM</th>
+            <th>Price / UOM</th>
+            <th>Dis %</th>
+            <th>Tax %</th>
+            <th>Line Total</th>
+          </thead>
+          <tbody class="align-center">
+            <tr>
+              <td>1</td>
+              <td>Padmount Transformer</td>
+              <td>2</td>
+              <td>kilos</td>
+              <td>$110</td>
+              <td>$10</td>
+              <td>13%</td>
+              <td>$130</td>
+            </tr>
+            <tr>
+              <td>2</td>
+              <td>Mount Transformer</td>
+              <td>2</td>
+              <td>kilos</td>
+              <td>$110</td>
+              <td>$10</td>
+              <td>13%</td>
+              <td>$130</td>
+            </tr>
+            <tr>
+              <td>3</td>
+              <td>Unmounted Transformer</td>
+              <td>2</td>
+              <td>kilos</td>
+              <td>$110</td>
+              <td>$10</td>
+              <td>13%</td>
+              <td>$130</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </body>
+</html>
