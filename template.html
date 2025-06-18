@@ -1,10 +1,19 @@
-<p>
-  Hello, my name is {{name}}. I am from {{hometown}}. I have {{kids.length}} kids:
-</p>
-<ul>
-  {{#kids}}
-  <li>{{name}} is {{age}}</li>
-  {{/kids}}
-</ul>
+<html>
+  <head>
+    <title>My PDF</title>
+  </head>
+  <body>
+    <p>
+      Hello, my name is {{name}}. I am from {{hometown}}. I have {{kids.length}}
+      kids:
+    </p>
+    <ul>
+      {{#kids}}
+      <li>{{name}} is {{age}}</li>
+      {{/kids}}
+    </ul>
 
-<img src="./bird.jpg" alt="" style="width: 100px; height: 100px;" />
+    <img src="./bird.jpg" alt="" style="width: 100px; height: 100px" />
+    <img src="{{chartImage}}" alt="chart" style="width: 100px; height: 100px" />
+  </body>
+</html>
