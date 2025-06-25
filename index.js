@@ -7,11 +7,11 @@ import juice from "juice";
 import PdfPrinter from "pdfmake";
 
 const fonts = {
-  Roboto: {
-    normal: "fonts/Roboto-Regular.ttf",
-    bold: "fonts/Roboto-Medium.ttf",
-    italics: "fonts/Roboto-Italic.ttf",
-    bolditalics: "fonts/Roboto-MediumItalic.ttf",
+  Inter: {
+    normal: "fonts/Inter_28pt-Regular.ttf",
+    bold: "fonts/Inter_28pt-Medium.ttf",
+    italics: "fonts/Inter_28pt-Italic.ttf",
+    bolditalics: "fonts/Inter_28pt-MediumItalic.ttf",
   },
 };
 

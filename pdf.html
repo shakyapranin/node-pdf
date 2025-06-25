@@ -2,131 +2,121 @@
   <head>
     <title>Invoice - INV-590004012345</title>
   </head>
-  <body>
-    <div style="display: flex; justify-content: space-between">
-      <div style="flex: 1">
-        <div>
-          <img src="bird.jpg" alt="" style="height: 100px; width: auto" />
-        </div>
-        <div>
-          <h2>Power Electronics US</h2>
-        </div>
-        <div>info@powerelectronicsus.com</div>
-        <div>1234 N Rosenbur Ct, Visalia, CA 932312, United States</div>
-      </div>
-      <div style="flex: 1; text-align: right">
-        <h1>INVOICE</h1>
-        <div>Invoice no.</div>
-        <div>INV-590004012345</div>
-      </div>
-    </div>
+  <body style="font-family: Inter; font-size: 9px; color: #404040">
+    <table style="width: 100%; border: none; border-collapse: collapse">
+      <tr>
+        <td style="width: 50%">
+          <img src="./logo.png" alt="" style="width: 179px; height: 39px" />
+        </td>
+        <td
+          style="
+            text-align: right;
+            font-weight: bold;
+            font-size: 23px;
+            width: 50%;
+          "
+        >
+          INVOICE
+        </td>
+      </tr>
+      <tr>
+        <td
+          colspan="2"
+          style="text-align: right; font-weight: bold; color: #020617"
+        >
+          Invoice No.
+        </td>
+      </tr>
+      <tr>
+        <td style="font-weight: bold; font-size: 11px; color: #020617">
+          Power Electronics US
+        </td>
+        <td style="text-align: right">INV-1234987234</td>
+      </tr>
+      <tr>
+        <td style="color: #020617">info@powerelectronicsus.com</td>
+        <td>Row 4, Col 2</td>
+      </tr>
+      <tr>
+        <td>1243 N Roseburg Ct, Visalia, CA 93291, United States</td>
+        <td>Row 5, Col 2</td>
+      </tr>
+    </table>
 
-    <div
-      style="display: flex; justify-content: space-between; margin-top: 20px"
-    >
-      <div style="display: flex; flex: 2">
-        <div style="flex: 1">
-          <div style="font-weight: bold">Invoice To</div>
-          <div>Brett Hamming</div>
-          <div>
-            Rex Industries Inc 630 N 400 W, Salt Lake City, UT 84103, United
-            States
-          </div>
-        </div>
-        <div style="flex: 1">
-          <div style="font-weight: bold">Ship To</div>
-          <div>Brett Hamming</div>
-          <div>
-            Rex Industries Inc 630 N 400 W, Salt Lake City, UT 84103, United
-            States
-          </div>
-        </div>
-      </div>
-      <div style="display: flex; flex: 2">
-        <div style="flex: 1; display: flex; flex-direction: column">
-          <div style="margin-bottom: 8px">
-            <div style="font-weight: bold">Invoice Date</div>
-            <div>10/10/2025</div>
-          </div>
-          <div>
-            <div style="font-weight: bold">Customer PO No.</div>
-            <div>PO-12343421</div>
-          </div>
-        </div>
-        <div style="flex: 1; display: flex; flex-direction: column">
-          <div style="margin-bottom: 8px">
-            <div style="font-weight: bold">Customer ID</div>
-            <div>91234-12342</div>
-          </div>
-          <div>
-            <div style="font-weight: bold">Packaging List</div>
-            <div>18234-1-123</div>
-          </div>
-        </div>
-      </div>
-    </div>
+    <table>
+      <tr>
+        <td style="font-weight: bold; color: #020617">Invoice To</td>
+        <td style="font-weight: bold; color: #020617">Ship To</td>
+        <td style="font-weight: bold; color: #020617">Invoice Date</td>
+        <td style="font-weight: bold; color: #020617">Customer ID</td>
+      </tr>
+      <tr>
+        <td style="color: #020617">Brett Hamming</td>
+        <td style="color: #020617">Brett Hamming</td>
+        <td>10/12/2025</td>
+        <td>9172-12112</td>
+      </tr>
+      <tr>
+        <td rowspan="2">
+          Rex Industries Inc 630 N 400 W, Salt Lake City, UT 84103, United
+          States
+        </td>
+        <td rowspan="2">
+          Rex Industries Inc 630 N 400 W, Salt Lake City, UT 84103, United
+          States
+        </td>
+        <td style="font-weight: bold; color: #020617">Customer PO No.</td>
+        <td style="font-weight: bold; color: #020617">Packing List</td>
+      </tr>
+      <tr>
+        <td>PO-1234234</td>
+        <td>123401-1-1234</td>
+      </tr>
+    </table>
 
-    <div style="margin-top: 30px">
-      <table style="width: 100%; border-collapse: collapse">
-        <thead>
-          <tr style="background-color: #f0f0f0; font-weight: bold">
-            <th style="border-bottom: 1px solid #ddd; padding: 8px">#</th>
-            <th style="border-bottom: 1px solid #ddd; padding: 8px">
-              Item/Service
-            </th>
-            <th style="border-bottom: 1px solid #ddd; padding: 8px">
-              Quantity
-            </th>
-            <th style="border-bottom: 1px solid #ddd; padding: 8px">UOM</th>
-            <th style="border-bottom: 1px solid #ddd; padding: 8px">
-              Price / UOM
-            </th>
-            <th style="border-bottom: 1px solid #ddd; padding: 8px">Dis %</th>
-            <th style="border-bottom: 1px solid #ddd; padding: 8px">Tax %</th>
-            <th style="border-bottom: 1px solid #ddd; padding: 8px">
-              Line Total
-            </th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr style="text-align: center">
-            <td style="border-bottom: 1px solid #ddd; padding: 8px">1</td>
-            <td style="border-bottom: 1px solid #ddd; padding: 8px">
-              Padmount Transformer
-            </td>
-            <td style="border-bottom: 1px solid #ddd; padding: 8px">2</td>
-            <td style="border-bottom: 1px solid #ddd; padding: 8px">kilos</td>
-            <td style="border-bottom: 1px solid #ddd; padding: 8px">$110</td>
-            <td style="border-bottom: 1px solid #ddd; padding: 8px">$10</td>
-            <td style="border-bottom: 1px solid #ddd; padding: 8px">13%</td>
-            <td style="border-bottom: 1px solid #ddd; padding: 8px">$130</td>
-          </tr>
-          <tr style="text-align: center">
-            <td style="border-bottom: 1px solid #ddd; padding: 8px">2</td>
-            <td style="border-bottom: 1px solid #ddd; padding: 8px">
-              Mount Transformer
-            </td>
-            <td style="border-bottom: 1px solid #ddd; padding: 8px">2</td>
-            <td style="border-bottom: 1px solid #ddd; padding: 8px">kilos</td>
-            <td style="border-bottom: 1px solid #ddd; padding: 8px">$110</td>
-            <td style="border-bottom: 1px solid #ddd; padding: 8px">$10</td>
-            <td style="border-bottom: 1px solid #ddd; padding: 8px">13%</td>
-            <td style="border-bottom: 1px solid #ddd; padding: 8px">$130</td>
-          </tr>
-          <tr style="text-align: center">
-            <td style="border-bottom: 1px solid #ddd; padding: 8px">3</td>
-            <td style="border-bottom: 1px solid #ddd; padding: 8px">
-              Unmounted Transformer
-            </td>
-            <td style="border-bottom: 1px solid #ddd; padding: 8px">2</td>
-            <td style="border-bottom: 1px solid #ddd; padding: 8px">kilos</td>
-            <td style="border-bottom: 1px solid #ddd; padding: 8px">$110</td>
-            <td style="border-bottom: 1px solid #ddd; padding: 8px">$10</td>
-            <td style="border-bottom: 1px solid #ddd; padding: 8px">13%</td>
-            <td style="border-bottom: 1px solid #ddd; padding: 8px">$130</td>
-          </tr>
-        </tbody>
-      </table>
-    </div>
+    <table>
+      <thead>
+        <th style="font-weight: bold; color: #020617">#</th>
+        <th style="font-weight: bold; color: #020617">Item/Service</th>
+        <th style="font-weight: bold; color: #020617">Quantity</th>
+        <th style="font-weight: bold; color: #020617">UOM</th>
+        <th style="font-weight: bold; color: #020617">Price / UOM</th>
+        <th style="font-weight: bold; color: #020617">Dis %</th>
+        <th style="font-weight: bold; color: #020617">Tax %</th>
+        <th style="font-weight: bold; color: #020617">Line Total</th>
+      </thead>
+      <tbody class="align-center">
+        <tr>
+          <td>1</td>
+          <td>Padmount Transformer</td>
+          <td>2</td>
+          <td>kilos</td>
+          <td>$110</td>
+          <td>$10</td>
+          <td>13%</td>
+          <td>$130</td>
+        </tr>
+        <tr>
+          <td>2</td>
+          <td>Mount Transformer</td>
+          <td>2</td>
+          <td>kilos</td>
+          <td>$110</td>
+          <td>$10</td>
+          <td>13%</td>
+          <td>$130</td>
+        </tr>
+        <tr>
+          <td>3</td>
+          <td>Unmounted Transformer</td>
+          <td>2</td>
+          <td>kilos</td>
+          <td>$110</td>
+          <td>$10</td>
+          <td>13%</td>
+          <td>$130</td>
+        </tr>
+      </tbody>
+    </table>
   </body>
 </html>
