@@ -69,12 +69,56 @@ const data = {
 
 const template = ejs.compile(source, { async: true });
 const result = await template(data);
-const inlinedHtml = juice(result); // CSS <style> converted to inline
-
-console.log(inlinedHtml);
+// const inlinedHtml = juice(result); // CSS <style> converted to inline
 
 const dom = new JSDOM("");
-const pdfContent = htmlToPdfmake(inlinedHtml, { window: dom.window });
+const pdfContent = htmlToPdfmake(result, { window: dom.window });
+
+// 1. Extract widths from HTML
+function extractTableWidths(html) {
+  const dom = new JSDOM(html);
+  const tables = [...dom.window.document.querySelectorAll("table")];
+  const widthMap = [];
+
+  tables.forEach((table) => {
+    const firstRow = table.querySelector("tr");
+    const cells = firstRow ? [...firstRow.children] : [];
+    const widths = cells.map((cell) => {
+      const w = cell.style.width || cell.getAttribute("width");
+      if (w?.includes("px")) return parseInt(w);
+      if (w?.includes("%")) return w; // optional: support percent
+      return "*"; // fallback
+    });
+    widthMap.push(widths);
+  });
+
+  return widthMap;
+}
+
+// 2. Recursively inject widths into pdfmake tables
+function applyWidthsToTables(content, widthsList, idx = { i: 0 }) {
+  if (Array.isArray(content)) {
+    content.forEach((item) => applyWidthsToTables(item, widthsList, idx));
+  } else if (content?.table && !content.table.widths) {
+    content.table.widths = widthsList[idx.i] || ["*"];
+    idx.i++;
+    // Process nested content within table cells
+    if (content.table.body) {
+      content.table.body.forEach((row) => {
+        if (Array.isArray(row)) {
+          row.forEach((cell) => applyWidthsToTables(cell, widthsList, idx));
+        }
+      });
+    }
+  } else if (typeof content === "object") {
+    ["content", "stack", "columns"].forEach((key) => {
+      if (content[key]) applyWidthsToTables(content[key], widthsList, idx);
+    });
+  }
+}
+const widthMaps = extractTableWidths(result);
+console.log("Extracted widths:", widthMaps);
+applyWidthsToTables(pdfContent, extractTableWidths(result));
 
 const docDefinition = {
   content: pdfContent,
