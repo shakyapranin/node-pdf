@@ -122,6 +122,23 @@ applyWidthsToTables(pdfContent, extractTableWidths(result));
 
 const docDefinition = {
   content: pdfContent,
+  defaultStyle: {
+    font: "Inter",
+  },
+  layout: {
+    hLineColor: function (i, node) {
+      // Make only the bottom-most line red
+      return i === node.table.body.length ? "red" : "black";
+    },
+  },
+  footer: function (currentPage, pageCount) {
+    return {
+      text: `Page ${currentPage} / ${pageCount}`,
+      alignment: "left",
+      fontSize: 9,
+      margin: [50, 0, 0, 40], // left, top, right, bottom
+    };
+  },
 };
 
 const pdfDoc = pdfPrinter.createPdfKitDocument(docDefinition);
